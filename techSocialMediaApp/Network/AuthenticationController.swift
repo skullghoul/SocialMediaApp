@@ -37,6 +37,8 @@ class AuthenticationController {
         
         // Ensure we had a good response (status 200)
         guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+            
+            
             throw AuthError.couldNotSignIn
         }
         
